@@ -32,27 +32,21 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'jpalardy/vim-slime'
 NeoBundle 'scrooloose/syntastic'
+
 NeoBundle 'scrooloose/nerdtree'
-""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
-
-"インデントに色を付けて見やすくする
 NeoBundle 'nathanaelkane/vim-indent-guides'
-
-" vimを立ち上げたときに、自動的にvim-indent-guidesをオンにする
-let g:indent_guides_enable_on_vim_startup = 1
-
-" Gitを便利に使う
 NeoBundle 'tpope/vim-fugitive'
 
-" grep検索の実行後にQuickFix Listを表示する
-autocmd QuickFixCmdPost *grep* cwindow
+""NeoBundle 'https://bitbucket.org/kovisoft/slimv'
 
-" ステータス行に現在のgitブランチを表示する
-set statusline+=%{fugitive#statusline()}
-
-call neobundle#begin(expand('~/.vim/bundle/'))
+call neobundle#end()
 
 filetype plugin indent on     " required!
 filetype indent on
 syntax on
 
+let g:indent_guides_enable_on_vim_startup = 1
+autocmd QuickFixCmdPost *grep* cwindow
+set statusline+=%{fugitive#statusline()}
+
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
