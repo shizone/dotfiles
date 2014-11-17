@@ -5,6 +5,8 @@ set showmatch "括弧入力時の対応する括弧を表示
 syntax on "コードの色分け
 set tabstop=2 "インデントをスペース2つ分に設定
 set smartindent "オートインデント
+set clipboard=unnamed,autoselect
+set fileencodings=iso-2022-jp,cp932,sjis,euc-jp,utf-8
 
 "#####検索設定#####
 set ignorecase "大文字/小文字の区別なく検索する

@@ -121,7 +121,12 @@ PATH=$PATH:$HOME/bin/tengu
 JAVA_HOME=/usr/lib/jvm/jdk1.8.0_05/
 export JAVA_HOME
 
-FORGE_HOME=/home/razon/bin/forge-distribution-2.7.0.Final
+SCALA_HOME=$HOME/bin/scala/scala-2.11.4
+export SCALA_HOME
+
+PATH=$PATH:$SCALA_HOME/bin
+
+FORGE_HOME=$HOME/bin/forge-distribution-2.7.0.Final
 export FORGE_HOME
 
 PATH=$PATH:$FORGE_HOME/bin
